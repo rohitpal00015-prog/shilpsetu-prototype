@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShilpSetu (शिल्पसेतु) — PS44 Small Business AI Assistant | Team CyberEye</title>
+  <meta name="description" content="ShilpSetu (कलासेतु) — AI-Powered Voice-First Small Business Assistant, Studio Photoshoot Engine & Fair-Price Marketplace for India's Traditional Artisans. Built by Team CyberEye for SPARK 2 SCALE 2026." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#FAF6F0',
+            sand: '#F2E9DD',
+            terracotta: '#B84A29',
+            terracottaDark: '#92371B',
+            gold: '#C9933B',
+            indigoCraft: '#1C3658',
+            forest: '#2A6F4E',
+            ink: '#231B17',
+            inkSoft: '#6B5E57',
+            line: '#E6DCD1'
+          },
+          fontFamily: {
+            display: ['"Rozha One"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      background-color: #FAF6F0;
+      background-image: radial-gradient(rgba(184, 74, 41, 0.055) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: #231B17;
+    }
+    .font-heritage {
+      font-family: 'Rozha One', serif;
+      letter-spacing: 0.01em;
+    }
+    .phone-scroll::-webkit-scrollbar { width: 4px; }
+    .phone-scroll::-webkit-scrollbar-track { background: transparent; }
+    .phone-scroll::-webkit-scrollbar-thumb { background: #D8C9B9; border-radius: 99px; }
+
+    /* AI Studio Photoshoot Visual Pipeline */
+    .studio-graded-img {
+      filter: contrast(1.13) saturate(1.26) brightness(1.06) sepia(0.06);
+    }
+    .raw-tilted-img {
+      filter: brightness(0.80) contrast(0.88) saturate(0.76);
+      transform: rotate(-7.5deg) scale(1.08);
+    }
+    .studio-backdrop {
+      background: radial-gradient(circle at 50% 38%, #FFFFFF 0%, #FAF5ED 58%, #E9DFD3 100%);
+    }
+    @keyframes micPulse {
+      0% { box-shadow: 0 0 0 0 rgba(184, 74, 41, 0.55); }
+      70% { box-shadow: 0 0 0 18px rgba(184, 74, 41, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(184, 74, 41, 0); }
+    }
+    .mic-listening { animation: micPulse 1.3s infinite; }
+
+    @keyframes wave {
+      0%, 100% { height: 6px; }
+      50% { height: 22px; }
+    }
+    .wave-bar { animation: wave 0.8s ease-in-out infinite; }
+    .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+    .wave-bar:nth-child(4) { animation-delay: 0.45s; }
+
+    @keyframes scanLine {
+      0% { top: 0%; opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+    .scan-laser {
+      position: absolute; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, #C9933B, #FFF, #B84A29, transparent);
+      box-shadow: 0 0 14px 3px rgba(201, 147, 59, 0.75);
+      animation: scanLine 1.1s linear infinite;
+    }
+
+    .phone-frame {
+      width: 396px;
+      max-width: 100%;
+      height: 790px;
+      box-shadow: 0 28px 70px -15px rgba(35, 27, 23, 0.32), 0 0 0 1px rgba(255,255,255,0.6) inset;
+    }
+    @media (max-width: 640px) {
+      .phone-frame {
+        width: 100%;
+        height: 760px;
+        border-radius: 28px;
+        border-width: 6px;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- ===================================================================== -->
+  <!-- TOP NAVIGATION BAR -->
+  <!-- ===================================================================== -->
+  <header class="w-full bg-white/90 backdrop-blur-md border-b border-line sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <a href="#overview" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-terracotta to-terracottaDark flex items-center justify-center shadow-md border border-gold/40">
+          <svg class="w-6 h-6 text-parchment" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3L4 9v11a1 1 0 001 1h14a1 1 0 001-1V9l-8-6z"/>
+            <path d="M9 21V13a3 3 0 016 0v8" stroke="#F4D28C"/>
+            <circle cx="12" cy="8.5" r="1.5" fill="#F4D28C" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-heritage text-xl md:text-2xl text-ink leading-none">ShilpSetu <span class="text-terracotta">शिल्पसेतु</span></div>
+          <div class="text-[10px] font-extrabold text-inkSoft tracking-wide">TEAM CYBEREYE • PS44 • SPARK 2 SCALE 2026</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-inkSoft">
+        <a href="#problem-solution" class="hover:text-terracotta transition">Problem & Solution</a>
+        <a href="#live-prototype" class="text-terracotta font-extrabold hover:opacity-80 transition">✨ Live Prototype</a>
+        <a href="#how-it-works" class="hover:text-terracotta transition">How It Works</a>
+        <a href="#architecture" class="hover:text-terracotta transition">Tech Stack</a>
+        <a href="#team" class="hover:text-terracotta transition">Team</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#live-prototype" class="px-3.5 py-2 rounded-xl bg-terracotta text-white text-xs font-extrabold hover:bg-terracottaDark transition shadow-sm">
+          Try Demo ↓
+        </a>
+        <a href="https://github.com/rohitpal00015-prog/shilpsetu-prototype" target="_blank" class="hidden sm:inline-flex px-3 py-2 rounded-xl bg-ink text-white text-xs font-bold hover:bg-ink/90 transition items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.08 11.08 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.66.79.55A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 1: HERO / WHAT IS SHILPSETU -->
+  <!-- ===================================================================== -->
+  <section id="overview" class="relative overflow-hidden border-b border-line bg-gradient-to-b from-white via-parchment to-sand/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-terracotta/10 border border-terracotta/25 text-terracotta text-xs font-extrabold mb-4">
+          <span>🚀 SPARK 2 SCALE 2026</span>
+          <span>•</span>
+          <span>Track 6: Business, FinTech & Emerging Tech</span>
+          <span>•</span>
+          <span class="bg-terracotta text-white px-2 py-0.5 rounded-full">PS44: Small Business AI Assistant</span>
+        </div>
+
+        <h1 class="font-heritage text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.12]">
+          Turning Every Rural Artisan’s Phone into an <span class="text-terracotta">AI Studio & Global Storefront</span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-inkSoft mt-5 max-w-3xl mx-auto leading-relaxed">
+          <strong>ShilpSetu (शिल्पसेतु)</strong> is an AI-powered, voice-first <strong>Small Business Assistant & Dual-Sided E-Commerce Marketplace</strong> built for India’s 7 million+ traditional artisans and micro-enterprises. Artisans simply <strong>snap a casual photo</strong> and <strong>speak in their mother tongue</strong> — our AI straightens & studio-lights the photo, writes bilingual SEO listings, protects their fair-price profit floor, and connects them directly to buyers with zero middlemen.
+        </p>
+
+        <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <a href="#live-prototype" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-terracotta to-[#D46233] text-white text-sm font-extrabold shadow-lg hover:scale-[1.02] transition flex items-center gap-2">
+            <span>✨</span> <span>Launch Live Interactive Prototype</span>
+          </a>
+          <a href="#how-it-works" class="px-5 py-3.5 rounded-2xl bg-white border border-line text-ink text-sm font-extrabold shadow-sm hover:border-terracotta transition flex items-center gap-2">
+            <span>🧭</span> <span>How It Works</span>
+          </a>
+          <a href="https://github.com/rohitpal00015-prog/shilpsetu-prototype" target="_blank" class="px-5 py-3.5 rounded-2xl bg-indigoCraft text-white text-sm font-extrabold shadow-sm hover:opacity-95 transition flex items-center gap-2">
+            <span>💻</span> <span>Public Repo on GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Key Impact Pillars -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+        <div class="bg-white rounded-2xl p-5 border border-line shadow-sm">
+          <div class="text-2xl mb-1.5">🎙️</div>
+          <div class="font-heritage text-2xl text-terracotta">11 Languages</div>
+          <div class="text-xs font-extrabold text-ink mt-0.5">Zero-Typing Voice Cataloging</div>
+          <p class="text-[11px] text-inkSoft mt-1">Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia & English.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-line shadow-sm">
+          <div class="text-2xl mb-1.5">📸</div>
+          <div class="font-heritage text-2xl text-indigoCraft">AI Studio Vision</div>
+          <div class="text-xs font-extrabold text-ink mt-0.5">Auto-Straighten & Keylight</div>
+          <p class="text-[11px] text-inkSoft mt-1">Fixes tilted smartphone shots, boosts craft pigments & adds clean studio lighting + soft shadows.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-line shadow-sm">
+          <div class="text-2xl mb-1.5">⚖️</div>
+          <div class="font-heritage text-2xl text-forest">92% Direct Pay</div>
+          <div class="text-xs font-extrabold text-ink mt-0.5">Fair-Price Cost Floor Engine</div>
+          <p class="text-[11px] text-inkSoft mt-1">Protects material cost + skilled labor hours so artisans never sell at a loss (+45% higher income).</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-line shadow-sm">
+          <div class="text-2xl mb-1.5">📶</div>
+          <div class="font-heritage text-2xl text-gold">&lt;0.2s Offline</div>
+          <div class="text-xs font-extrabold text-ink mt-0.5">Built for Rural 2G/3G India</div>
+          <p class="text-[11px] text-inkSoft mt-1">Local SQLite/Hive queue publishes instantly offline and auto-syncs to Firebase Firestore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 2: THE PROBLEM VS. OUR SOLUTION -->
+  <!-- ===================================================================== -->
+  <section id="problem-solution" class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-terracotta">Why ShilpSetu Exists</span>
+      <h2 class="font-heritage text-3xl sm:text-4xl text-ink mt-1">Bridging the Digital Divide for Small Artisan Businesses</h2>
+      <p class="text-sm text-inkSoft mt-2">Conventional e-commerce apps were built for English-speaking urban sellers with DSLR cameras — not India’s grassroots craft entrepreneurs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Problem Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-7 border border-red-200/80 shadow-sm">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-extrabold mb-4">
+          <span>❌</span> The Real-World Problem Today
+        </div>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">1</span>
+            <div>
+              <div class="font-extrabold text-ink">Language & Digital Literacy Barrier</div>
+              <p class="text-xs text-inkSoft mt-0.5">Over 80% of rural artisans cannot type English SEO titles, tags, or navigate complex seller dashboards on Amazon/Etsy.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">2</span>
+            <div>
+              <div class="font-extrabold text-ink">Poor Smartphone Photography Rejections</div>
+              <p class="text-xs text-inkSoft mt-0.5">Artisans lack studio lights and tripods. Crooked, dimly lit photos get ignored by online buyers even when the craft is museum-grade.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">3</span>
+            <div>
+              <div class="font-extrabold text-ink">Middlemen Exploitation (60%+ Margin Loss)</div>
+              <p class="text-xs text-inkSoft mt-0.5">3–4 layers of brokers capture most of the retail price while artisans unknowingly underprice their skilled labor hours.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">4</span>
+            <div>
+              <div class="font-extrabold text-ink">App Failures on Weak Rural Networks</div>
+              <p class="text-xs text-inkSoft mt-0.5">Heavy image uploads freeze and fail in remote villages with unstable 2G/3G connectivity.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Solution Card -->
+      <div class="bg-gradient-to-br from-white to-parchment rounded-3xl p-6 sm:p-7 border-2 border-forest/30 shadow-md">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-forest text-xs font-extrabold mb-4">
+          <span>✅</span> The ShilpSetu AI Assistant Solution
+        </div>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-emerald-100 text-forest flex items-center justify-center font-black flex-shrink-0">1</span>
+            <div>
+              <div class="font-extrabold text-ink">11-Language Pure Voice-to-Catalog AI</div>
+              <p class="text-xs text-inkSoft mt-0.5">Artisans speak naturally in Hindi, Bengali, Tamil, Marathi, etc. Live dictation + Gemini 2.5 Flash creates polished bilingual listings automatically.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-emerald-100 text-forest flex items-center justify-center font-black flex-shrink-0">2</span>
+            <div>
+              <div class="font-extrabold text-ink">1-Tap AI Studio Photoshoot & Auto-Straightening</div>
+              <p class="text-xs text-inkSoft mt-0.5">OpenCV contour detection straightens crooked angles, boosts natural craft hues, and renders a clean studio backdrop with contact drop shadow.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-emerald-100 text-forest flex items-center justify-center font-black flex-shrink-0">3</span>
+            <div>
+              <div class="font-extrabold text-ink">Algorithmic Fair-Price Floor & Direct Storefront</div>
+              <p class="text-xs text-inkSoft mt-0.5">Computes minimum sustainable floor price (materials + fair hourly wage) and connects directly with buyers via "Meet the Maker" audio stories.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-7 h-7 rounded-xl bg-emerald-100 text-forest flex items-center justify-center font-black flex-shrink-0">4</span>
+            <div>
+              <div class="font-extrabold text-ink">Offline-First Local Sync Engine</div>
+              <p class="text-xs text-inkSoft mt-0.5">Drift SQLite + Hive caches listings & compressed photos locally in &lt;0.2s and syncs seamlessly to Firebase Cloud Firestore when online.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 3: LIVE INTERACTIVE PROTOTYPE -->
+  <!-- ===================================================================== -->
+  <section id="live-prototype" class="w-full bg-sand/55 border-y border-line py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-terracotta text-white text-xs font-extrabold mb-3 shadow-sm">
+          <span>🎮</span> LIVE INTERACTIVE WORKING PROTOTYPE
+        </div>
+        <h2 class="font-heritage text-3xl sm:text-4xl text-ink">Test Both Seller & Buyer Modes Right Here</h2>
+        <p class="text-sm text-inkSoft mt-2">
+          Everything in the phone simulator below is <strong>fully interactive</strong> — upload or transform a photo, speak into your mic (or run Demo Voice), publish a new craft, switch to Buyer Mode, listen to the artisan's audio story, checkout, and track your live order!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- LEFT: Judge Interactive Walkthrough Controls -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-white rounded-3xl p-5 border border-line shadow-sm">
+            <h3 class="font-heritage text-xl text-ink mb-1">2-Minute Judge Walkthrough</h3>
+            <p class="text-xs text-inkSoft mb-4">Click any step below to jump straight to that live feature inside the app:</p>
+
+            <div class="space-y-2.5">
+              <button onclick="jumpTo('seller', 'add', 1)" class="w-full text-left p-3.5 rounded-2xl bg-parchment hover:bg-sand border border-line transition flex items-start gap-3 group">
+                <span class="text-xl">📸</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-xs text-ink">1. AI Studio Photoshoot & Straightener</span>
+                    <span class="text-[10px] font-bold text-terracotta group-hover:translate-x-0.5 transition">Open →</span>
+                  </div>
+                  <p class="text-[11px] text-inkSoft mt-0.5">Start with a tilted raw photo, run AI Studio Photoshoot, and drag the Before/After slider!</p>
+                </div>
+              </button>
+
+              <button onclick="jumpTo('seller', 'add', 2)" class="w-full text-left p-3.5 rounded-2xl bg-parchment hover:bg-sand border border-line transition flex items-start gap-3 group">
+                <span class="text-xl">🎙️</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-xs text-ink">2. Live Voice Dictation (11 Languages)</span>
+                    <span class="text-[10px] font-bold text-terracotta group-hover:translate-x-0.5 transition">Open →</span>
+                  </div>
+                  <p class="text-[11px] text-inkSoft mt-0.5">Tap Mic to speak live or click "Demo Hindi Voice" to watch words transcribe in real time.</p>
+                </div>
+              </button>
+
+              <button onclick="jumpTo('seller', 'add', 3)" class="w-full text-left p-3.5 rounded-2xl bg-parchment hover:bg-sand border border-line transition flex items-start gap-3 group">
+                <span class="text-xl">🤖</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-xs text-ink">3. Gemini Bilingual Listing & Audio TTS</span>
+                    <span class="text-[10px] font-bold text-terracotta group-hover:translate-x-0.5 transition">Open →</span>
+                  </div>
+                  <p class="text-[11px] text-inkSoft mt-0.5">Inspect auto-generated English + Hindi SEO title/story & tap "🔊 Listen" for voice accessibility.</p>
+                </div>
+              </button>
+
+              <button onclick="jumpTo('seller', 'add', 4)" class="w-full text-left p-3.5 rounded-2xl bg-parchment hover:bg-sand border border-line transition flex items-start gap-3 group">
+                <span class="text-xl">⚖️</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-xs text-ink">4. Fair-Price Floor & Instant Publish</span>
+                    <span class="text-[10px] font-bold text-terracotta group-hover:translate-x-0.5 transition">Open →</span>
+                  </div>
+                  <p class="text-[11px] text-inkSoft mt-0.5">Adjust material/labor sliders, check guaranteed artisan profit, and publish live to the storefront!</p>
+                </div>
+              </button>
+
+              <button onclick="jumpTo('buyer', 'store')" class="w-full text-left p-3.5 rounded-2xl bg-indigoCraft/5 hover:bg-indigoCraft/10 border border-indigoCraft/20 transition flex items-start gap-3 group">
+                <span class="text-xl">🛍️</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-xs text-indigoCraft">5. Buyer Store, Audio Stories & Checkout</span>
+                    <span class="text-[10px] font-bold text-indigoCraft group-hover:translate-x-0.5 transition">Open →</span>
+                  </div>
+                  <p class="text-[11px] text-inkSoft mt-0.5">Browse your newly listed craft, hear "Meet the Maker", checkout via UPI/COD & track orders live.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-indigoCraft text-white rounded-3xl p-5 shadow-md">
+            <div class="flex items-center gap-2 text-[#F4D28C] text-xs font-extrabold mb-1.5">
+              <span>💡</span> Pro Tip for Judges
+            </div>
+            <p class="text-xs text-white/90 leading-relaxed">
+              Try toggling the <strong>"Online • Firebase"</strong> pill at the top-right of the phone screen to simulate <strong>Rural Offline 2G Mode</strong> — publish a craft offline, then reconnect to watch automatic cloud synchronization! You can also chat with <strong>ShilpMitra AI</strong> (bottom-right button).
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: LIVE INTERACTIVE PHONE SIMULATOR -->
+        <div class="lg:col-span-7 flex flex-col items-center">
+          <!-- Role Switcher Pills -->
+          <div class="bg-white p-1.5 rounded-2xl border border-line shadow-sm flex items-center gap-1.5 mb-4">
+            <button onclick="switchRole('seller')" id="pill-seller" class="px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 bg-terracotta text-white shadow-sm">
+              <span>🔨</span> <span data-i18n="seller_portal">Artisan Portal (Seller)</span>
+            </button>
+            <button onclick="switchRole('buyer')" id="pill-buyer" class="px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 text-inkSoft hover:bg-parchment">
+              <span>🛍️</span> <span data-i18n="buyer_store">Buyer Storefront</span>
+            </button>
+          </div>
+
+          <!-- PHONE SHELL -->
+          <div class="phone-frame bg-parchment rounded-[42px] border-[10px] border-[#261F1C] relative overflow-hidden flex flex-col">
+
+            <!-- SPLASH INTRO OVERLAY (Auto-fades cleanly) -->
+            <div id="splash-overlay" class="absolute inset-0 z-50 bg-gradient-to-b from-[#2A1812] via-[#5C2414] to-[#B84A29] flex flex-col items-center justify-center text-center p-6 transition-opacity duration-500">
+              <div class="w-20 h-20 rounded-3xl bg-parchment/15 backdrop-blur-md border border-gold/50 flex items-center justify-center shadow-2xl mb-4 animate-bounce">
+                <svg class="w-12 h-12 text-[#F4D28C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 3L4 9v11a1 1 0 001 1h14a1 1 0 001-1V9l-8-6z"/>
+                  <path d="M9 21V13a3 3 0 016 0v8" stroke="#FFFDF9"/>
+                  <circle cx="12" cy="8.5" r="1.6" fill="#FFFDF9" stroke="none"/>
+                </svg>
+              </div>
+              <h2 class="font-heritage text-4xl text-white">शिल्पसेतु</h2>
+              <p class="text-[11px] font-bold tracking-[0.22em] text-[#F4D28C] uppercase mt-1">SHILPSETU • BY TEAM CYBEREYE</p>
+              <button onclick="dismissSplash()" class="mt-6 px-5 py-2 rounded-full bg-white text-terracotta font-extrabold text-xs shadow-lg">
+                Start Demo →
+              </button>
+            </div>
+
+            <!-- PHONE TOP BAR -->
+            <div class="bg-[#FFFDF9] px-4 pt-3 pb-2.5 border-b border-line flex-shrink-0 z-20">
+              <div class="flex justify-between items-center text-[10px] font-bold text-inkSoft mb-2">
+                <span id="clock-display">09:41</span>
+                <div class="flex items-center gap-2">
+                  <button onclick="toggleOfflineMode()" id="network-pill" class="px-2 py-0.5 rounded-full bg-emerald-50 text-forest border border-emerald-200 flex items-center gap-1 text-[9px] font-extrabold transition" title="Click to test Rural Offline Mode">
+                    <span class="w-1.5 h-1.5 rounded-full bg-forest animate-pulse"></span>
+                    <span>Online • Firebase</span>
+                  </button>
+                  <span>🔋 96%</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-xl bg-terracotta flex items-center justify-center text-white shadow-sm">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 3L4 9v11h16V9l-8-6z"/>
+                      <path d="M9 21v-7a3 3 0 016 0v7"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-heritage text-lg leading-none text-ink" data-i18n="app_name">ShilpSetu</div>
+                    <div id="phone-role-label" class="text-[10px] font-bold text-terracotta">Artisan Portal (Seller)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <select id="lang-select" onchange="changeLanguage(this.value)" class="text-[10px] font-bold bg-parchment border border-line rounded-lg px-1.5 py-1 text-ink focus:outline-none focus:border-terracotta cursor-pointer">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="bn">🇮🇳 বাংলা</option>
+                    <option value="mr">🇮🇳 मराठी</option>
+                    <option value="ta">🇮🇳 தமிழ்</option>
+                    <option value="gu">🇮🇳 ગુજરાતી</option>
+                  </select>
+
+                  <button onclick="toggleRole()" id="phone-switch-btn" class="px-2 py-1 rounded-lg bg-sand border border-terracotta/25 text-terracotta text-[10px] font-extrabold hover:bg-terracotta hover:text-white transition">
+                    🛍️ Buyer
+                  </button>
+
+                  <button onclick="setBuyerTab('cart')" id="phone-cart-btn" class="hidden relative p-1.5 rounded-lg bg-parchment border border-line">
+                    <span class="text-sm leading-none">🛒</span>
+                    <span id="cart-count-badge" class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-terracotta text-white text-[9px] font-black flex items-center justify-center">1</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- OFFLINE BANNER -->
+            <div id="offline-banner" class="hidden bg-amber-100 border-b border-amber-300 px-3 py-1.5 flex items-center justify-between text-[10px] font-bold text-amber-900">
+              <span>✈️ Offline Rural Mode — Queued in SQLite/Hive</span>
+              <button onclick="toggleOfflineMode()" class="underline font-extrabold">Reconnect</button>
+            </div>
+
+            <!-- SCROLLABLE APP CONTENT -->
+            <div id="app-content" class="flex-1 overflow-y-auto phone-scroll p-4 pb-20 relative"></div>
+
+            <!-- FLOATING SHILPMITRA AI BUTTON -->
+            <button onclick="openChatbot()" class="absolute bottom-[70px] right-4 z-30 flex items-center gap-1.5 bg-indigoCraft text-white pl-2.5 pr-3.5 py-2 rounded-full shadow-xl border border-white/20 hover:scale-105 transition">
+              <span class="w-5 h-5 rounded-full bg-gold text-ink flex items-center justify-center text-xs font-black">✨</span>
+              <span class="text-[11px] font-extrabold">ShilpMitra</span>
+            </button>
+
+            <!-- BOTTOM NAV -->
+            <nav id="bottom-nav" class="bg-white border-t border-line px-3 py-2 flex justify-around items-center flex-shrink-0 z-20"></nav>
+
+            <!-- IN-PHONE MODAL -->
+            <div id="phone-modal" class="hidden absolute inset-0 z-40 bg-black/50 backdrop-blur-[2px] flex items-end justify-center">
+              <div id="phone-modal-body" class="bg-parchment w-full max-h-[86%] rounded-t-3xl border-t border-line overflow-y-auto phone-scroll p-5 shadow-2xl"></div>
+            </div>
+
+            <!-- IN-PHONE TOAST -->
+            <div id="phone-toast" class="pointer-events-none opacity-0 transition-all duration-300 absolute top-24 left-1/2 -translate-x-1/2 z-50 bg-ink text-white text-[11px] font-bold px-3.5 py-2 rounded-full shadow-xl whitespace-nowrap"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 4: HOW IT WORKS (4-STEP END-TO-END FLOW) -->
+  <!-- ===================================================================== -->
+  <section id="how-it-works" class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-terracotta">End-to-End Artisan Workflow</span>
+      <h2 class="font-heritage text-3xl sm:text-4xl text-ink mt-1">From Village Workshop to Global Buyer in 60 Seconds</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white rounded-3xl p-5 border border-line shadow-sm relative">
+        <div class="w-9 h-9 rounded-2xl bg-terracotta text-white font-black text-sm flex items-center justify-center mb-3">01</div>
+        <h3 class="font-extrabold text-sm text-ink">Snap Any Photo</h3>
+        <p class="text-xs text-inkSoft mt-1.5 leading-relaxed">Artisan clicks a casual smartphone photo — even crooked or in dim indoor light. OpenCV auto-straightens and applies studio lighting.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-5 border border-line shadow-sm relative">
+        <div class="w-9 h-9 rounded-2xl bg-terracotta text-white font-black text-sm flex items-center justify-center mb-3">02</div>
+        <h3 class="font-extrabold text-sm text-ink">Speak in Mother Tongue</h3>
+        <p class="text-xs text-inkSoft mt-1.5 leading-relaxed">Zero typing! Artisan explains the craft in any of 11 Indian languages. Speech AI transcribes live while Gemini writes bilingual SEO copy.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-5 border border-line shadow-sm relative">
+        <div class="w-9 h-9 rounded-2xl bg-terracotta text-white font-black text-sm flex items-center justify-center mb-3">03</div>
+        <h3 class="font-extrabold text-sm text-ink">Lock Fair-Price Floor</h3>
+        <p class="text-xs text-inkSoft mt-1.5 leading-relaxed">Our Cost Floor Engine calculates raw materials + craft hours to guarantee ethical wages and protect artisans from predatory pricing.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-5 border border-line shadow-sm relative">
+        <div class="w-9 h-9 rounded-2xl bg-forest text-white font-black text-sm flex items-center justify-center mb-3">04</div>
+        <h3 class="font-extrabold text-sm text-ink">Sell Direct & Track Live</h3>
+        <p class="text-xs text-inkSoft mt-1.5 leading-relaxed">Listing goes live instantly (online or offline queue). Buyers listen to the maker's audio story, order via UPI/COD, and track all 4 stages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 5: SYSTEM ARCHITECTURE & TECH STACK -->
+  <!-- ===================================================================== -->
+  <section id="architecture" class="w-full bg-white border-y border-line py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-indigoCraft">Engineering & Scalability</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl text-ink mt-1">Production Architecture & Tech Stack</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="rounded-3xl p-5 bg-parchment border border-line">
+          <div class="text-xs font-extrabold text-terracotta uppercase tracking-wider mb-2">📱 Mobile & Web Client</div>
+          <ul class="text-xs text-ink space-y-1.5 font-semibold">
+            <li>• Flutter & Dart (Cross-Platform)</li>
+            <li>• Riverpod State Management</li>
+            <li>• Easy Localization (11 Languages)</li>
+            <li>• Rozha One + Noto Sans Cultural UI</li>
+            <li>• Hardware Color Matrix Grading</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl p-5 bg-parchment border border-line">
+          <div class="text-xs font-extrabold text-indigoCraft uppercase tracking-wider mb-2">🧠 Generative & Speech AI</div>
+          <ul class="text-xs text-ink space-y-1.5 font-semibold">
+            <li>• Google Gemini 2.5 Flash API</li>
+            <li>• Bilingual SEO Listing Synthesis</li>
+            <li>• Whisper + Live Device STT</li>
+            <li>• Text-to-Speech (TTS) Audio Guides</li>
+            <li>• ShilpMitra AI Artisan Companion</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl p-5 bg-parchment border border-line">
+          <div class="text-xs font-extrabold text-forest uppercase tracking-wider mb-2">📸 Computer Vision Pipeline</div>
+          <ul class="text-xs text-ink space-y-1.5 font-semibold">
+            <li>• Python FastAPI Microservice</li>
+            <li>• OpenCV Contour Auto-Straightening</li>
+            <li>• CLAHE Micro-Contrast & White Balance</li>
+            <li>• HSV Craft Pigment Vibrance Boost</li>
+            <li>• E-Commerce 1200×1200 Studio Canvas</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl p-5 bg-parchment border border-line">
+          <div class="text-xs font-extrabold text-gold uppercase tracking-wider mb-2">☁️ Cloud & Offline Engine</div>
+          <ul class="text-xs text-ink space-y-1.5 font-semibold">
+            <li>• Firebase Auth & Cloud Firestore</li>
+            <li>• Drift (SQLite) Offline Media Queue</li>
+            <li>• Hive Instant Local Persistence</li>
+            <li>• WorkManager Background Auto-Sync</li>
+            <li>• 2G/3G Low-Bandwidth Compression</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 6: TEAM CYBEREYE & FOOTER -->
+  <!-- ===================================================================== -->
+  <footer id="team" class="bg-[#231B17] text-parchment py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div>
+          <div class="font-heritage text-3xl text-white">ShilpSetu <span class="text-[#F4D28C]">शिल्पसेतु</span></div>
+          <p class="text-xs text-parchment/75 mt-2 leading-relaxed">
+            Built with passion for India's traditional artisans under <strong>SPARK 2 SCALE 2026 — EXOFINITY ONLINE HACKATHON</strong> (Track 6 • PS44: Small Business AI Assistant).
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
+          <div class="text-[10px] font-extrabold uppercase tracking-widest text-[#F4D28C] mb-2">Built by Team CyberEye</div>
+          <ul class="text-xs space-y-1.5 font-semibold">
+            <li>👤 <strong>Rohit Pal</strong> <span class="text-parchment/60">(Team Leader)</span></li>
+            <li>👤 <strong>Gautam Kumar Maurya</strong> <span class="text-parchment/60">(Team Member)</span></li>
+            <li>👤 <strong>Praveen Singh</strong> <span class="text-parchment/60">(Team Member)</span></li>
+          </ul>
+          <div class="text-[11px] text-parchment/70 mt-2.5 pt-2.5 border-t border-white/10">
+            🏫 United Institute of Technology
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <a href="https://github.com/rohitpal00015-prog/shilpsetu-prototype" target="_blank" class="px-4 py-3 rounded-xl bg-terracotta text-white text-xs font-extrabold text-center hover:bg-terracottaDark transition">
+            💻 View Public GitHub Repository
+          </a>
+          <a href="#live-prototype" class="px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-xs font-extrabold text-center hover:bg-white/15 transition">
+            ✨ Jump Back to Live Prototype
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-white/10 text-center text-[11px] text-parchment/50">
+        © 2026 Team CyberEye — ShilpSetu (कलासेतु). All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- INTERACTIVE PROTOTYPE ENGINE (JAVASCRIPT) -->
+  <!-- ===================================================================== -->
+  <script>
+    const i18n = {
+      en: {
+        app_name: 'ShilpSetu',
+        seller_portal: 'Artisan Portal (Seller)',
+        buyer_store: 'Buyer Storefront',
+        step1_title: 'Capture Craft Photo',
+        step1_sub: 'Even crooked or dim photos become studio shoots with AI',
+        step2_title: 'Describe by Voice',
+        step2_sub: 'Speak in any of 11 Indian languages — live typing, zero effort',
+        step3_title: 'AI Bilingual Listing',
+        step3_sub: 'Auto-generated English & Hindi SEO title, story & tags',
+        step4_title: 'Fair-Price Floor & Publish',
+        step4_sub: 'Guaranteed fair artisan wages before listing goes live',
+        nav_add: 'Add Craft',
+        nav_catalogue: 'Catalogue',
+        nav_orders: 'Orders',
+        nav_explore: 'Explore',
+        nav_cart: 'Cart',
+        nav_my_orders: 'Track Orders',
+        publish_btn: '🚀 Publish Product Instantly'
+      },
+      hi: {
+        app_name: 'शिल्पसेतु',
+        seller_portal: 'कारीगर पोर्टल (Seller)',
+        buyer_store: 'ग्राहक बाज़ार (Buyer)',
+        step1_title: 'उत्पाद की फोटो लें',
+        step1_sub: 'टेढ़ी या कम रोशनी वाली फोटो भी AI से स्टूडियो शूट बन जाती है',
+        step2_title: 'बोलकर विवरण लिखें',
+        step2_sub: '11 भारतीय भाषाओं में बोलें — शब्द सीधे लाइव टाइप होंगे',
+        step3_title: 'AI द्विभाषी लिस्टिंग',
+        step3_sub: 'अंग्रेज़ी और हिंदी में अपने आप बना टाइटल और विवरण',
+        step4_title: 'उचित मूल्य व प्रकाशन',
+        step4_sub: 'लागत और मेहनत के अनुसार कारीगर का सुरक्षित मुनाफ़ा',
+        nav_add: 'नया उत्पाद',
+        nav_catalogue: 'कैटलॉग',
+        nav_orders: 'ऑर्डर',
+        nav_explore: 'खरीदारी',
+        nav_cart: 'कार्ट',
+        nav_my_orders: 'ट्रैक ऑर्डर',
+        publish_btn: '🚀 तुरंत उत्पाद लिस्ट करें'
+      },
+      bn: {
+        app_name: 'শিল্পসেতু',
+        seller_portal: 'কারিগর পোর্টাল (Seller)',
+        buyer_store: 'ক্রেতা বাজার (Buyer)',
+        step1_title: 'হস্তশিল্পের ছবি তুলুন',
+        step1_sub: 'AI স্টুডিও লাইটিং ও অটো-স্ট্রেটেনিং',
+        step2_title: 'কথা বলে বিবরণ দিন',
+        step2_sub: 'বাংলা বা যেকোনো ভারতীয় ভাষায় বলুন, সরাসরি টাইপ হবে',
+        step3_title: 'AI তালিকা পর্যালোচনা',
+        step3_sub: 'স্বয়ংক্রিয় শিরোনাম, গল্প এবং ট্যাগ',
+        step4_title: 'ন্যায্য মূল্য ও প্রকাশ',
+        step4_sub: 'কারিগরের ন্যায্য মজুরি সুরক্ষিত করুন',
+        nav_add: 'যোগ করুন',
+        nav_catalogue: 'ক্যাটালগ',
+        nav_orders: 'অর্ডার',
+        nav_explore: 'অন্বেষণ',
+        nav_cart: 'কার্ট',
+        nav_my_orders: 'ট্র্যাক করুন',
+        publish_btn: '🚀 এখনই প্রকাশ করুন'
+      },
+      mr: {
+        app_name: 'शिल्पसेतू',
+        seller_portal: 'कारागीर पोर्टल (Seller)',
+        buyer_store: 'खरेदीदार बाजार (Buyer)',
+        step1_title: 'हस्तकलेचा फोटो घ्या',
+        step1_sub: 'AI स्टुडिओ लाइटिंग आणि ऑटो-सरळ करणे',
+        step2_title: 'बोलून माहिती लिहा',
+        step2_sub: 'मराठीत बोला — थेट लाइव्ह टाइप होईल',
+        step3_title: 'AI द्विभाषिक यादी',
+        step3_sub: 'स्वयंचलित शीर्षक, वर्णन आणि टॅग्ज',
+        step4_title: 'योग्य किंमत व प्रकाशन',
+        step4_sub: 'कच्चा माल आणि श्रमानुसार सुरक्षित नफा',
+        nav_add: 'उत्पादन जोडा',
+        nav_catalogue: 'कॅटलॉग',
+        nav_orders: 'ऑर्डर्स',
+        nav_explore: 'खरेदी',
+        nav_cart: 'कार्ट',
+        nav_my_orders: 'ट्रॅकिंग',
+        publish_btn: '🚀 त्वरित प्रकाशित करा'
+      },
+      ta: {
+        app_name: 'சிற்பசேது',
+        seller_portal: 'கைவினைஞர் தளம்',
+        buyer_store: 'வாங்குபவர் கடை',
+        step1_title: 'பொருளின் புகைப்படம்',
+        step1_sub: 'AI ஸ்டுடியோ ஒளி மற்றும் நேராக்கம்',
+        step2_title: 'பேசி விவரிக்கவும்',
+        step2_sub: 'தமிழில் பேசுங்கள் — நேரடியாக தட்டச்சு ஆகும்',
+        step3_title: 'AI பட்டியல் மதிப்பாய்வு',
+        step3_sub: 'தானியங்கி தலைப்பு & விளக்கம்',
+        step4_title: 'நியாயமான விலை',
+        step4_sub: 'கைவினைஞருக்கு பாதுகாப்பான லாபம்',
+        nav_add: 'சேர்',
+        nav_catalogue: 'பட்டியல்',
+        nav_orders: 'ஆர்டர்கள்',
+        nav_explore: 'கடை',
+        nav_cart: 'கூடை',
+        nav_my_orders: 'கண்காணிப்பு',
+        publish_btn: '🚀 உடனே வெளியிடு'
+      },
+      gu: {
+        app_name: 'શિલ્પસેતુ',
+        seller_portal: 'કારીગર પોર્ટલ',
+        buyer_store: 'ગ્રાહક બજાર',
+        step1_title: 'ઉત્પાદનનો ફોટો લો',
+        step1_sub: 'AI સ્ટુડિયો લાઇટિંગ અને ઓટો-સ્ટ્રેટનિંગ',
+        step2_title: 'બોલીને વિગત લખો',
+        step2_sub: 'ગુજરાતીમાં બોલો — સીધું લાઇવ ટાઇપ થશે',
+        step3_title: 'AI દ્વિભાષી લિસ્ટિંગ',
+        step3_sub: 'ઓટોમેટિક શીર્ષક અને વર્ણન',
+        step4_title: 'યોગ્ય કિંમત અને પ્રકાશન',
+        step4_sub: 'કારીગરનો નફો સુરક્ષિત કરો',
+        nav_add: 'ઉમેરો',
+        nav_catalogue: 'કેટલોગ',
+        nav_orders: 'ઓર્ડર',
+        nav_explore: 'શોધો',
+        nav_cart: 'કાર્ટ',
+        nav_my_orders: 'ટ્રેક કરો',
+        publish_btn: '🚀 તરત જ પ્રકાશિત કરો'
+      }
+    };
+
+    const speechLocales = {
+      en: 'en-IN', hi: 'hi-IN', bn: 'bn-IN', mr: 'mr-IN', ta: 'ta-IN', gu: 'gu-IN'
+    };
+
+    const sampleCrafts = [
+      {
+        id: 'sample_pottery',
+        name: 'Jaipur Terracotta Vase',
+        category: 'Pottery',
+        tiltAngle: '-7.4°',
+        img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80',
+        fallbackEmoji: '🏺',
+        demoHindi: 'यह हाथ से बना जयपुर का शुद्ध मिट्टी का टेराकोटा फूलदान है। इसे प्राकृतिक गेरू रंग से रंगा गया है और इसे बनाने में 6 घंटे की मेहनत लगी है।',
+        demoEnglish: 'Handcrafted Jaipur terracotta flower vase shaped on a traditional potter wheel, painted with natural mineral pigments over 6 hours of artisan labor.'
+      },
+      {
+        id: 'sample_textile',
+        name: 'Banarasi Handloom Stole',
+        category: 'Textiles',
+        tiltAngle: '-6.2°',
+        img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80',
+        fallbackEmoji: '🧣',
+        demoHindi: 'यह वाराणसी के बुनकरों द्वारा हथकरघा पर बुना गया शुद्ध रेशमी दुपट्टा है, जिस पर पारंपरिक सुनहरी ज़री का काम है।',
+        demoEnglish: 'Authentic Varanasi handloom pure silk stole woven with traditional gold zari floral motifs by third-generation weavers.'
+      },
+      {
+        id: 'sample_brass',
+        name: 'Moradabad Engraved Brass Diya',
+        category: 'Metalwork',
+        tiltAngle: '-8.1°',
+        img: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=700&q=80',
+        fallbackEmoji: '🪔',
+        demoHindi: 'मुरादाबाद की पारंपरिक नक्काशी से बना शुद्ध पीतल का दीया और सजावटी कटोरा। त्योहारों और उपहार के लिए सर्वोत्तम।',
+        demoEnglish: 'Hand-engraved solid brass decorative diya and vessel from Moradabad, crafted using centuries-old Nakshi embossing techniques.'
+      }
+    ];
+
+    let state = {
+      lang: 'en',
+      role: 'seller',
+      sellerTab: 'add',
+      buyerTab: 'store',
+      isOffline: false,
+      wizardStep: 1,
+      isListening: false,
+      isProcessingPhoto: false,
+      buyerSearch: '',
+      buyerCategory: 'All',
+      draft: {
+        photoUrl: sampleCrafts[0].img,
+        sampleIndex: 0,
+        studioApplied: false,
+        sliderPos: 50,
+        tiltAngle: '-7.4°',
+        spokenText: '',
+        titleEn: 'Handcrafted Jaipur Terracotta Heritage Vase',
+        titleHi: 'जयपुर हस्तनिर्मित टेराकोटा पारंपरिक फूलदान',
+        descEn: 'Authentically hand-thrown on a traditional potter’s wheel in Jaipur using natural river clay and mineral ochre pigments. Finished with breathable eco-friendly polish for timeless Indian home decor.',
+        descHi: 'जयपुर के पारंपरिक कुम्हार चाक पर शुद्ध प्राकृतिक मिट्टी और खनिज रंगों से हाथ से बनाया गया सुंदर टेराकोटा फूलदान।',
+        category: 'Pottery',
+        tags: ['Handmade', 'Terracotta', 'Jaipur Craft', 'Eco-Friendly', 'GI Inspired'],
+        materialCost: 220,
+        laborHours: 6,
+        hourlyRate: 95,
+        finalPrice: 980
+      },
+      products: [
+        {
+          id: 'prod_101',
+          titleEn: 'Jaipur Blue Pottery Floral Vase',
+          titleHi: 'जयपुर ब्लू पॉटरी फूलदान',
+          descEn: 'Hand-painted quartz ceramic vase crafted in Sanganer, Jaipur using lead-free cobalt blue and turquoise natural dyes.',
+          artisan: 'Ramesh Prajapati',
+          cluster: 'Jaipur, Rajasthan',
+          category: 'Pottery',
+          price: 1150,
+          costFloor: 780,
+          img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80',
+          audioStory: 'Namaste, I am Ramesh from Jaipur. This blue pottery vase takes 4 days of hand-molding quartz clay and firing in a traditional kiln. Buying directly supports our family workshop.',
+          status: 'Live',
+          studioVerified: true
+        },
+        {
+          id: 'prod_102',
+          titleEn: 'Banarasi Zari Silk Heritage Stole',
+          titleHi: 'बनारसी ज़री रेशम दुपट्टा',
+          descEn: 'Woven on a wooden pit loom over 18 hours by master weavers in Varanasi using pure mulberry silk and antique zari threads.',
+          artisan: 'Amina Khatoon',
+          cluster: 'Varanasi, UP',
+          category: 'Textiles',
+          price: 2450,
+          costFloor: 1750,
+          img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80',
+          audioStory: 'Namaste, I am Amina from Banaras. Every golden motif on this stole is woven by hand without power looms, preserving a 300-year-old heritage.',
+          status: 'Live',
+          studioVerified: true
+        },
+        {
+          id: 'prod_103',
+          titleEn: 'Kutch Hand-Carved Rosewood Bowl',
+          titleHi: 'कच्छ नक्काशीदार शीशम कटोरा',
+          descEn: 'Sustainably sourced Indian rosewood hand-carved with intricate geometric folk patterns and seasoned with natural beeswax.',
+          artisan: 'Devji Suthar',
+          cluster: 'Bhuj, Gujarat',
+          category: 'Woodcraft',
+          price: 890,
+          costFloor: 580,
+          img: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=700&q=80',
+          audioStory: 'Hello, I am Devji from Kutch. Each chisel mark on this rosewood bowl is done by hand using tools passed down from my grandfather.',
+          status: 'Live',
+          studioVerified: true
+        },
+        {
+          id: 'prod_104',
+          titleEn: 'Madhubani Folk Art Wall Canvas',
+          titleHi: 'मधुबनी लोक कला पेंटिंग',
+          descEn: 'Original Mithila painting hand-drawn with bamboo nibs and natural turmeric, indigo, and vermilion pigments on handmade paper.',
+          artisan: 'Sunita Devi',
+          cluster: 'Madhubani, Bihar',
+          category: 'Paintings',
+          price: 1650,
+          costFloor: 1050,
+          img: 'https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&fit=crop&w=700&q=80',
+          audioStory: 'Pranam, I am Sunita Devi from Madhubani. This Tree of Life painting uses natural pigments from flowers and leaves to bring prosperity to your home.',
+          status: 'Live',
+          studioVerified: true
+        }
+      ],
+      cart: [{ id: 'prod_101', qty: 1 }],
+      orders: [
+        {
+          id: 'ORD-8841',
+          productTitle: 'Jaipur Blue Pottery Floral Vase',
+          buyerName: 'Ananya Verma (New Delhi)',
+          amount: 1150,
+          payment: 'UPI Paid',
+          stage: 2,
+          date: 'Today, 10:15 AM'
+        }
+      ],
+      chatMessages: [
+        { sender: 'ai', text: 'नमस्ते! मैं शिल्प-मित्र (ShilpMitra) हूँ। मैं आपकी फोटो सुधारने, सही कीमत तय करने, या पैकेजिंग में मदद कर सकता हूँ। कुछ भी पूछें!' }
+      ]
+    };
+
+    function t(key) {
+      return (i18n[state.lang] && i18n[state.lang][key]) || i18n.en[key] || key;
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('phone-toast');
+      el.textContent = msg;
+      el.classList.remove('opacity-0', 'translate-y-2');
+      el.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        el.classList.remove('opacity-100', 'translate-y-0');
+        el.classList.add('opacity-0', 'translate-y-2');
+      }, 2500);
+    }
+
+    function dismissSplash() {
+      const splash = document.getElementById('splash-overlay');
+      splash.style.opacity = '0';
+      setTimeout(() => splash.classList.add('hidden'), 450);
+    }
+    setTimeout(() => {
+      const splash = document.getElementById('splash-overlay');
+      if (splash && !splash.classList.contains('hidden')) dismissSplash();
+    }, 1300);
+
+    function changeLanguage(lang) {
+      state.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.textContent = t(el.getAttribute('data-i18n'));
+      });
+      renderAll();
+      showToast(`🌐 Language switched to ${lang.toUpperCase()}`);
+    }
+
+    function toggleOfflineMode() {
+      state.isOffline = !state.isOffline;
+      const pill = document.getElementById('network-pill');
+      const banner = document.getElementById('offline-banner');
+      if (state.isOffline) {
+        pill.className = 'px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1 text-[9px] font-extrabold transition';
+        pill.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span><span>Offline 2G</span>';
+        banner.classList.remove('hidden');
+        showToast('✈️ Rural Offline Mode Active (Local Queue)');
+      } else {
+        pill.className = 'px-2 py-0.5 rounded-full bg-emerald-50 text-forest border border-emerald-200 flex items-center gap-1 text-[9px] font-extrabold transition';
+        pill.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-forest animate-pulse"></span><span>Online • Firebase</span>';
+        banner.classList.add('hidden');
+        let syncedCount = 0;
+        state.products.forEach(p => {
+          if (p.status === 'Pending Sync') { p.status = 'Live'; syncedCount++; }
+        });
+        showToast(syncedCount > 0 ? `☁️ Auto-synced ${syncedCount} offline craft(s) to Firebase!` : '📶 Back Online • Firebase Firestore Synced');
+      }
+      renderAll();
+    }
+
+    function switchRole(role) { state.role = role; renderAll(); }
+    function toggleRole() { switchRole(state.role === 'seller' ? 'buyer' : 'seller'); }
+    function setSellerTab(tab) { state.sellerTab = tab; renderAll(); }
+    function setBuyerTab(tab) { state.buyerTab = tab; renderAll(); }
+
+    function jumpTo(role, tab, step) {
+      state.role = role;
+      if (role === 'seller') {
+        state.sellerTab = tab || 'add';
+        if (step) state.wizardStep = step;
+      } else {
+        state.buyerTab = tab || 'store';
+      }
+      dismissSplash();
+      renderAll();
+    }
+
+    function selectSampleCraft(idx) {
+      const s = sampleCrafts[idx];
+      state.draft.sampleIndex = idx;
+      state.draft.photoUrl = s.img;
+      state.draft.tiltAngle = s.tiltAngle;
+      state.draft.studioApplied = false;
+      state.draft.category = s.category;
+      state.draft.titleEn = `Handcrafted ${s.name}`;
+      renderAll();
+      showToast(`📷 Loaded tilted raw photo (${s.tiltAngle})`);
+    }
+
+    function handleCustomPhotoUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        state.draft.photoUrl = e.target.result;
+        state.draft.studioApplied = false;
+        state.draft.tiltAngle = '-5.8°';
+        renderAll();
+        showToast('📷 Photo captured! Tap AI Studio Photoshoot');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function runAiStudioTransform() {
+      if (state.isProcessingPhoto) return;
+      state.isProcessingPhoto = true;
+      renderAll();
+      setTimeout(() => {
+        state.isProcessingPhoto = false;
+        state.draft.studioApplied = true;
+        state.draft.sliderPos = 78;
+        renderAll();
+        showToast('✨ Auto-Straightened & Studio Lighting Applied!');
+      }, 1050);
+    }
+
+    function updateBeforeAfterSlider(val) {
+      state.draft.sliderPos = Number(val);
+      const afterWrap = document.getElementById('ba-after-wrap');
+      const divider = document.getElementById('ba-divider');
+      if (afterWrap && divider) {
+        afterWrap.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+        divider.style.left = `${val}%`;
+      }
+    }
+
+    let recognition = null;
+    function toggleLiveVoiceDictation() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        showToast('ℹ️ Browser mic unsupported — running Demo Voice!');
+        runDemoVoiceTyping('hi');
+        return;
+      }
+      if (state.isListening && recognition) {
+        recognition.stop();
+        state.isListening = false;
+        renderAll();
+        return;
+      }
+      try {
+        recognition = new SpeechRecognition();
+        recognition.lang = speechLocales[state.lang] || 'hi-IN';
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.onstart = () => { state.isListening = true; renderAll(); showToast(`🎙️ Listening in ${recognition.lang}...`); };
+        recognition.onresult = (event) => {
+          let transcript = '';
+          for (let i = 0; i < event.results.length; i++) transcript += event.results[i][0].transcript;
+          state.draft.spokenText = transcript;
+          const box = document.getElementById('voice-text-box');
+          if (box) box.value = transcript;
+        };
+        recognition.onerror = () => { state.isListening = false; renderAll(); showToast('Mic unavailable — try Demo Voice button below!'); };
+        recognition.onend = () => { state.isListening = false; renderAll(); };
+        recognition.start();
+      } catch (_) { runDemoVoiceTyping('hi'); }
+    }
+
+    function runDemoVoiceTyping(mode) {
+      if (window._demoTypingTimer) clearInterval(window._demoTypingTimer);
+      const sample = sampleCrafts[state.draft.sampleIndex] || sampleCrafts[0];
+      const words = (mode === 'hi' ? sample.demoHindi : sample.demoEnglish).split(' ');
+      let i = 0;
+      state.isListening = true;
+      state.draft.spokenText = '';
+      renderAll();
+      window._demoTypingTimer = setInterval(() => {
+        if (i < words.length) {
+          state.draft.spokenText += (i === 0 ? '' : ' ') + words[i];
+          const box = document.getElementById('voice-text-box');
+          if (box) box.value = state.draft.spokenText;
+          i++;
+        } else {
+          clearInterval(window._demoTypingTimer);
+          state.isListening = false;
+          renderAll();
+          showToast('✅ Voice transcribed live! Tap Generate AI Listing');
+        }
+      }, 90);
+    }
+
+    function generateAiListingFromVoice() {
+      const text = state.draft.spokenText.trim();
+      const s = sampleCrafts[state.draft.sampleIndex] || sampleCrafts[0];
+      if (text.length > 5) {
+        const lower = text.toLowerCase();
+        if (lower.includes('silk') || lower.includes('saree') || lower.includes('रेशम') || lower.includes('दुपट्टा')) {
+          state.draft.category = 'Textiles';
+          state.draft.titleEn = 'Banarasi Pure Silk Zari Handloom Stole';
+          state.draft.titleHi = 'बनारसी शुद्ध रेशम ज़री हथकरघा दुपट्टा';
+          state.draft.tags = ['Handloom', 'Banarasi Silk', 'Zari Work', 'Authentic India'];
+          state.draft.materialCost = 650;
+          state.draft.laborHours = 12;
+          state.draft.finalPrice = 2250;
+        } else if (lower.includes('brass') || lower.includes('diya') || lower.includes('पीतल') || lower.includes('दीया')) {
+          state.draft.category = 'Metalwork';
+          state.draft.titleEn = 'Moradabad Hand-Engraved Brass Diya Vessel';
+          state.draft.titleHi = 'मुरादाबाद पारंपरिक नक्काशीदार पीतल दीया';
+          state.draft.tags = ['Moradabad Brass', 'Nakshi Art', 'Festive Decor', 'Handmade'];
+          state.draft.materialCost = 340;
+          state.draft.laborHours = 5;
+          state.draft.finalPrice = 1190;
+        } else {
+          state.draft.titleEn = s.name + ' — Artisan Edition';
+          state.draft.titleHi = 'हस्तनिर्मित भारतीय शिल्प — ' + (s.category === 'Pottery' ? 'टेराकोटा कला' : s.category);
+          state.draft.descEn = `${text} — Authentically handcrafted by verified Indian artisans using sustainable traditional methods. Every purchase guarantees fair artisan wages.`;
+          state.draft.descHi = `${text} — भारतीय पारंपरिक कारीगरों द्वारा पूर्णतः हाथ से निर्मित प्रामाणिक हस्तशिल्प।`;
+        }
+      }
+      state.wizardStep = 3;
+      renderAll();
+      showToast('✨ Gemini AI Generated Bilingual SEO Listing!');
+    }
+
+    function speakTextAloud(text, langCode) {
+      if (!('speechSynthesis' in window)) { showToast('🔊 Audio playback simulated'); return; }
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = langCode || 'en-IN';
+      utter.rate = 0.96;
+      window.speechSynthesis.speak(utter);
+      showToast('🔊 Playing Artisan Voice Audio...');
+    }
+
+    function speakProductStory(prodId) {
+      const p = state.products.find(x => x.id === prodId);
+      if (p) speakTextAloud(p.audioStory, 'en-IN');
+    }
+
+    function speakCurrentDraft() {
+      speakTextAloud(`${state.draft.titleEn}. ${state.draft.descEn}`, 'en-IN');
+    }
+
+    function updatePricingField(field, value) {
+      state.draft[field] = Number(value);
+      const floor = state.draft.materialCost + (state.draft.laborHours * state.draft.hourlyRate);
+      if (field !== 'finalPrice' && state.draft.finalPrice < floor + 150) {
+        state.draft.finalPrice = Math.round((floor * 1.35) / 10) * 10;
+      }
+      renderAll();
+    }
+
+    function publishListingInstantly() {
+      const d = state.draft;
+      const floor = d.materialCost + (d.laborHours * d.hourlyRate);
+      const profit = Math.max(0, d.finalPrice - floor);
+      state.products.unshift({
+        id: 'prod_' + Date.now(),
+        titleEn: d.titleEn,
+        titleHi: d.titleHi,
+        descEn: d.descEn,
+        artisan: 'You (Verified Artisan)',
+        cluster: 'Jaipur Craft Cluster',
+        category: d.category,
+        price: d.finalPrice,
+        costFloor: floor,
+        img: d.photoUrl,
+        audioStory: d.spokenText || d.descEn,
+        status: state.isOffline ? 'Pending Sync' : 'Live',
+        studioVerified: d.studioApplied
+      });
+
+      openModal(`
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto rounded-full ${state.isOffline ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-forest'} flex items-center justify-center text-3xl mb-3 shadow-inner">
+            ${state.isOffline ? '☁️' : '🎉'}
+          </div>
+          <h3 class="font-heritage text-2xl text-ink">${state.isOffline ? 'Queued Offline!' : 'Listing Live Instantly!'}</h3>
+          <p class="text-xs text-inkSoft mt-1">
+            ${state.isOffline ? 'Saved in local SQLite/Hive. Auto-syncs to Firebase when 2G/4G returns.' : 'Published to Firebase Firestore & live in Buyer Storefront in 0.14s!'}
+          </p>
+          <div class="mt-4 bg-white rounded-2xl p-4 border border-line text-left space-y-2 shadow-sm">
+            <div class="flex justify-between text-xs"><span class="text-inkSoft">Selling Price</span><span class="font-extrabold text-ink">₹${d.finalPrice}</span></div>
+            <div class="flex justify-between text-xs"><span class="text-inkSoft">Protected Cost Floor</span><span class="font-bold text-inkSoft">₹${floor}</span></div>
+            <div class="border-t border-line pt-2 flex justify-between items-center"><span class="text-xs font-extrabold text-ink">Guaranteed Artisan Profit</span><span class="font-heritage text-xl text-forest">+₹${profit}</span></div>
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-2">
+            <button onclick="closeModal(); setSellerTab('catalogue');" class="py-2.5 rounded-xl bg-parchment border border-line text-ink text-xs font-extrabold">View Catalogue</button>
+            <button onclick="closeModal(); switchRole('buyer'); setBuyerTab('store');" class="py-2.5 rounded-xl bg-terracotta text-white text-xs font-extrabold shadow-md">See in Buyer Store →</button>
+          </div>
+        </div>
+      `);
+      state.wizardStep = 1;
+      renderAll();
+    }
+
+    function addToCart(prodId, openCartAfter = false) {
+      const existing = state.cart.find(c => c.id === prodId);
+      if (existing) existing.qty++;
+      else state.cart.push({ id: prodId, qty: 1 });
+      updateCartBadge();
+      if (openCartAfter) { closeModal(); setBuyerTab('cart'); }
+      else { showToast('🛒 Added to Cart!'); renderAll(); }
+    }
+
+    function updateCartQty(prodId, delta) {
+      const idx = state.cart.findIndex(c => c.id === prodId);
+      if (idx === -1) return;
+      state.cart[idx].qty += delta;
+      if (state.cart[idx].qty <= 0) state.cart.splice(idx, 1);
+      updateCartBadge();
+      renderAll();
+    }
+
+    function updateCartBadge() {
+      const total = state.cart.reduce((s, c) => s + c.qty, 0);
+      const badge = document.getElementById('cart-count-badge');
+      if (badge) badge.textContent = total;
+    }
+
+    function openProductDetail(prodId) {
+      const p = state.products.find(x => x.id === prodId);
+      if (!p) return;
+      const artisanShare = Math.round(p.price * 0.92);
+      openModal(`
+        <div>
+          <div class="flex justify-between items-center mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-sand text-terracotta text-[10px] font-extrabold border border-terracotta/20">${p.category} • Verified Craft</span>
+            <button onclick="closeModal()" class="w-7 h-7 rounded-full bg-white border border-line text-inkSoft font-bold text-xs">✕</button>
+          </div>
+          <div class="studio-backdrop rounded-2xl p-4 relative flex items-center justify-center h-44 border border-line overflow-hidden">
+            <div class="absolute bottom-3 w-36 h-4 rounded-full bg-black/20 blur-md"></div>
+            <img src="${p.img}" class="max-h-36 object-contain rounded-xl relative z-10 ${p.studioVerified ? 'studio-graded-img' : ''}" onerror="this.style.display='none'" />
+            ${p.studioVerified ? '<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-terracotta text-white text-[9px] font-extrabold">✨ AI Studio Shot</span>' : ''}
+          </div>
+          <h3 class="font-heritage text-xl text-ink mt-3 leading-snug">${p.titleEn}</h3>
+          <p class="text-xs text-inkSoft font-semibold">${p.titleHi}</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-heritage text-2xl text-terracotta">₹${p.price}</span>
+            <span class="text-[10px] font-bold text-forest bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">✓ 92% Direct to Artisan (₹${artisanShare})</span>
+          </div>
+          <div class="mt-3 bg-indigoCraft text-white rounded-2xl p-3 flex items-center justify-between gap-2 shadow-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gold/20 border border-gold text-gold flex items-center justify-center text-sm">🎙️</div>
+              <div>
+                <div class="text-[9px] text-[#F4D28C] font-extrabold uppercase tracking-wider">Meet the Maker</div>
+                <div class="text-xs font-bold">${p.artisan} • ${p.cluster}</div>
+              </div>
+            </div>
+            <button onclick="speakProductStory('${p.id}')" class="px-3 py-1.5 rounded-xl bg-gold text-ink text-[10px] font-black hover:bg-amber-300 transition">▶ Listen</button>
+          </div>
+          <p class="text-xs text-inkSoft mt-3 leading-relaxed">${p.descEn}</p>
+          <div class="mt-4 grid grid-cols-2 gap-2.5">
+            <button onclick="addToCart('${p.id}', false); closeModal();" class="py-2.5 rounded-xl bg-white border border-terracotta text-terracotta text-xs font-extrabold">+ Add to Cart</button>
+            <button onclick="addToCart('${p.id}', true)" class="py-2.5 rounded-xl bg-terracotta text-white text-xs font-extrabold shadow-md">Buy Now →</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function placeOrderFromCart() {
+      if (state.cart.length === 0) return;
+      const firstItem = state.products.find(p => p.id === state.cart[0].id);
+      const totalAmt = state.cart.reduce((sum, c) => {
+        const pr = state.products.find(x => x.id === c.id);
+        return sum + (pr ? pr.price * c.qty : 0);
+      }, 0);
+      const paymentEl = document.querySelector('input[name="payMethod"]:checked');
+      const newOrder = {
+        id: 'ORD-' + Math.floor(1000 + Math.random() * 9000),
+        productTitle: (firstItem ? firstItem.titleEn : 'Artisan Craft') + (state.cart.length > 1 ? ` +${state.cart.length - 1} more` : ''),
+        buyerName: 'Hackathon Judge (New Delhi)',
+        amount: totalAmt,
+        payment: paymentEl ? paymentEl.value : 'UPI Paid',
+        stage: 1,
+        date: 'Just Now'
+      };
+      state.orders.unshift(newOrder);
+      state.cart = [];
+      updateCartBadge();
+      state.buyerTab = 'orders';
+      renderAll();
+      showToast(`🎉 Order ${newOrder.id} Placed! Synced to Seller Orders`);
+    }
+
+    function advanceOrderStage(orderId) {
+      const ord = state.orders.find(o => o.id === orderId);
+      if (ord && ord.stage < 4) {
+        ord.stage++;
+        renderAll();
+        showToast(`📦 Order ${orderId} updated to Stage ${ord.stage}/4!`);
+      }
+    }
+
+    function openChatbot() { renderChatbotModal(); }
+    function renderChatbotModal() {
+      const msgsHtml = state.chatMessages.map(m => `
+        <div class="flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}">
+          <div class="max-w-[82%] rounded-2xl px-3.5 py-2.5 text-xs leading-relaxed ${m.sender === 'user' ? 'bg-terracotta text-white rounded-br-sm' : 'bg-white border border-line text-ink rounded-bl-sm shadow-sm'}">${m.text}</div>
+        </div>
+      `).join('');
+      openModal(`
+        <div class="flex flex-col h-[410px]">
+          <div class="flex items-center justify-between pb-3 border-b border-line">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-indigoCraft text-gold flex items-center justify-center font-black text-sm">✨</div>
+              <div>
+                <div class="font-bold text-sm text-ink">ShilpMitra AI Companion</div>
+                <div class="text-[10px] text-forest font-bold">Gemini 2.5 Flash • 11 Languages</div>
+              </div>
+            </div>
+            <button onclick="closeModal()" class="w-7 h-7 rounded-full bg-white border border-line text-xs font-bold">✕</button>
+          </div>
+          <div id="chat-feed" class="flex-1 overflow-y-auto phone-scroll py-3 space-y-2.5">${msgsHtml}</div>
+          <div class="flex gap-1.5 overflow-x-auto pb-2">
+            <button onclick="sendChat('How should I price my clay pottery?')" class="whitespace-nowrap px-2.5 py-1 rounded-full bg-sand text-[10px] font-bold text-ink border border-line">💰 Pricing Tip</button>
+            <button onclick="sendChat('How to pack terracotta safely?')" class="whitespace-nowrap px-2.5 py-1 rounded-full bg-sand text-[10px] font-bold text-ink border border-line">📦 Safe Packaging</button>
+            <button onclick="sendChat('मेरी बिक्री कैसे बढ़ाऊँ?')" class="whitespace-nowrap px-2.5 py-1 rounded-full bg-sand text-[10px] font-bold text-ink border border-line">📈 बिक्री बढ़ाएं</button>
+          </div>
+          <form onsubmit="event.preventDefault(); sendChat(document.getElementById('chat-input').value);" class="flex gap-2 pt-1">
+            <input id="chat-input" type="text" placeholder="Ask in Hindi or English..." class="flex-1 px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-none focus:border-terracotta" />
+            <button type="submit" class="px-3.5 py-2 rounded-xl bg-indigoCraft text-white text-xs font-bold">Send</button>
+          </form>
+        </div>
+      `);
+      const feed = document.getElementById('chat-feed');
+      if (feed) feed.scrollTop = feed.scrollHeight;
+    }
+
+    function sendChat(text) {
+      if (!text || !text.trim()) return;
+      state.chatMessages.push({ sender: 'user', text: text.trim() });
+      const lower = text.toLowerCase();
+      let reply = 'शिल्पसेतु AI आपके शिल्प को दुनिया तक पहुँचाने में मदद करता है! Step 1 में फोटो को Studio Look दें और Step 2 में अपनी भाषा में बोलकर लिस्टिंग बनाएं।';
+      if (lower.includes('price') || lower.includes('कीमत')) reply = '💡 Fair-Price Tip: Always cover Raw Material + (Labor Hours × ₹95/hr skill wage) + 30% sustainable margin. Never sell below your ShilpSetu Cost Floor!';
+      else if (lower.includes('pack') || lower.includes('पैकेज')) reply = '📦 Fragile Craft Packaging: Wrap terracotta in double corrugated sheets, add honeycomb kraft padding on corners, and place inside a 5-ply box.';
+      else if (lower.includes('बिक्री') || lower.includes('sell')) reply = '📈 बिक्री बढ़ाने के 3 मंत्र: (1) AI Studio Look ऑन करें, (2) अपनी आवाज़ में उत्पाद की कहानी रिकॉर्ड करें, और (3) त्योहारों से पहले स्टॉक अपडेट करें!';
+      state.chatMessages.push({ sender: 'ai', text: reply });
+      renderChatbotModal();
+    }
+
+    function openModal(html) {
+      document.getElementById('phone-modal-body').innerHTML = html;
+      document.getElementById('phone-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('phone-modal').classList.add('hidden');
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    }
+
+    function renderSellerWizard() {
+      const d = state.draft;
+      const step = state.wizardStep;
+      const floor = d.materialCost + (d.laborHours * d.hourlyRate);
+      const profit = d.finalPrice - floor;
+
+      const stepper = `
+        <div class="flex items-center justify-between mb-4 bg-white p-2 rounded-2xl border border-line">
+          ${[1,2,3,4].map(n => `
+            <button onclick="state.wizardStep=${n}; renderAll();" class="flex-1 flex flex-col items-center py-1 rounded-xl transition ${step === n ? 'bg-terracotta/10' : ''}">
+              <div class="w-6 h-6 rounded-full text-[11px] font-black flex items-center justify-center ${step >= n ? 'bg-terracotta text-white' : 'bg-sand text-inkSoft'}">${step > n ? '✓' : n}</div>
+              <span class="text-[9px] font-bold mt-0.5 ${step === n ? 'text-terracotta' : 'text-inkSoft'}">${['Photo', 'Voice', 'AI Edit', 'Price'][n-1]}</span>
+            </button>
+          `).join('')}
+        </div>
+      `;
+
+      if (step === 1) {
+        return `
+          ${stepper}
+          <h3 class="font-heritage text-xl text-ink">${t('step1_title')}</h3>
+          <p class="text-[11px] text-inkSoft mb-3">${t('step1_sub')}</p>
+          <div class="relative rounded-2xl overflow-hidden border border-line shadow-sm bg-white h-52 flex items-center justify-center">
+            ${state.isProcessingPhoto ? `
+              <div class="absolute inset-0 z-30 bg-ink/75 backdrop-blur-sm flex flex-col items-center justify-center text-white text-center p-4">
+                <div class="scan-laser"></div>
+                <div class="text-2xl mb-1.5 animate-spin">✨</div>
+                <div class="text-xs font-extrabold">AI Studio Photoshoot Running...</div>
+                <div class="text-[10px] text-[#F4D28C] mt-1">Straightening ${d.tiltAngle} → 0.0° • Studio Keylight & Shadow</div>
+              </div>
+            ` : ''}
+            ${!d.studioApplied ? `
+              <div class="w-full h-full bg-[#D9D2CA] relative flex items-center justify-center overflow-hidden">
+                <img src="${d.photoUrl}" class="w-4/5 h-4/5 object-cover rounded-xl raw-tilted-img shadow-md" />
+                <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] font-bold">📷 Raw Camera (${d.tiltAngle} tilted)</span>
+              </div>
+            ` : `
+              <div class="relative w-full h-full select-none overflow-hidden">
+                <div class="absolute inset-0 bg-[#D9D2CA] flex items-center justify-center">
+                  <img src="${d.photoUrl}" class="w-4/5 h-4/5 object-cover rounded-xl raw-tilted-img" />
+                  <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/65 text-white text-[9px] font-bold">Original</span>
+                </div>
+                <div id="ba-after-wrap" class="absolute inset-0 studio-backdrop flex items-center justify-center" style="clip-path: inset(0 ${100 - d.sliderPos}% 0 0);">
+                  <div class="absolute bottom-5 w-44 h-5 rounded-full bg-black/25 blur-md"></div>
+                  <img src="${d.photoUrl}" class="max-h-[82%] max-w-[82%] object-contain rounded-xl studio-graded-img relative z-10 shadow-sm" />
+                  <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-terracotta text-white text-[9px] font-extrabold shadow">✨ AI Studio Look (0.0° Level)</span>
+                </div>
+                <div id="ba-divider" class="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-20 pointer-events-none" style="left: ${d.sliderPos}%;">
+                  <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-terracotta text-white border-2 border-white shadow-md flex items-center justify-center text-[10px] font-black">⇄</div>
+                </div>
+                <input type="range" min="5" max="95" value="${d.sliderPos}" oninput="updateBeforeAfterSlider(this.value)" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" />
+              </div>
+            `}
+          </div>
+          ${d.studioApplied ? `<p class="text-[10px] text-center font-bold text-terracotta mt-1.5">👆 Drag slider left/right to compare Before vs After</p>` : ''}
+          <div class="mt-3 flex items-center gap-1.5">
+            ${sampleCrafts.map((s, idx) => `
+              <button onclick="selectSampleCraft(${idx})" class="flex-1 py-1.5 px-1.5 rounded-xl border text-[10px] font-bold transition ${d.sampleIndex === idx ? 'bg-terracotta/10 border-terracotta text-terracotta' : 'bg-white border-line text-inkSoft'}">${s.fallbackEmoji} ${s.category}</button>
+            `).join('')}
+            <label class="py-1.5 px-2.5 rounded-xl bg-white border border-line text-[10px] font-bold text-ink cursor-pointer hover:bg-sand">
+              📤 Upload
+              <input type="file" accept="image/*" onchange="handleCustomPhotoUpload(event)" class="hidden" />
+            </label>
+          </div>
+          <div class="mt-3.5 space-y-2">
+            <button onclick="runAiStudioTransform()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-terracotta to-[#D46233] text-white text-xs font-extrabold shadow-md">✨ ${d.studioApplied ? 'Re-Run AI Studio Lighting' : 'Apply AI Studio Photoshoot'}</button>
+            <button onclick="state.wizardStep=2; renderAll();" class="w-full py-2.5 rounded-2xl bg-ink text-white text-xs font-extrabold">Accept Photo & Describe by Voice →</button>
+          </div>
+        `;
+      }
+
+      if (step === 2) {
+        return `
+          ${stepper}
+          <h3 class="font-heritage text-xl text-ink">${t('step2_title')}</h3>
+          <p class="text-[11px] text-inkSoft mb-3">${t('step2_sub')}</p>
+          <div class="flex flex-col items-center my-3">
+            <button onclick="toggleLiveVoiceDictation()" class="w-24 h-24 rounded-full ${state.isListening ? 'bg-red-600 mic-listening' : 'bg-terracotta hover:bg-terracottaDark'} text-white flex flex-col items-center justify-center shadow-xl transition-all">
+              <span class="text-3xl leading-none">${state.isListening ? '⏹️' : '🎙️'}</span>
+              <span class="text-[10px] font-extrabold mt-1">${state.isListening ? 'Stop' : 'Tap to Speak'}</span>
+            </button>
+            ${state.isListening ? `
+              <div class="mt-2.5 flex items-center gap-1.5 text-red-600 text-[11px] font-extrabold">
+                <div class="flex items-center gap-0.5 h-5">
+                  <span class="w-1 bg-red-600 rounded-full wave-bar"></span>
+                  <span class="w-1 bg-red-600 rounded-full wave-bar"></span>
+                  <span class="w-1 bg-red-600 rounded-full wave-bar"></span>
+                  <span class="w-1 bg-red-600 rounded-full wave-bar"></span>
+                </div>
+                <span>Listening live... Typing directly below</span>
+              </div>
+            ` : `<p class="text-[10px] text-inkSoft font-semibold mt-2">Pure Live Voice Typing • Zero recording friction</p>`}
+          </div>
+          <div class="flex gap-2 mb-3">
+            <button onclick="runDemoVoiceTyping('hi')" class="flex-1 py-1.5 px-2 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-[10px] font-extrabold">🇮🇳 Demo Hindi Voice</button>
+            <button onclick="runDemoVoiceTyping('en')" class="flex-1 py-1.5 px-2 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 text-[10px] font-extrabold">🇬🇧 Demo English Voice</button>
+          </div>
+          <label class="text-[10px] font-extrabold uppercase tracking-wider text-inkSoft">Live Transcript (Editable)</label>
+          <textarea id="voice-text-box" rows="3" oninput="state.draft.spokenText=this.value" placeholder="Tap Mic & speak in your language..." class="w-full mt-1 p-3 rounded-2xl bg-white border border-line text-xs text-ink focus:outline-none focus:border-terracotta leading-relaxed">${d.spokenText}</textarea>
+          <button onclick="generateAiListingFromVoice()" class="w-full mt-3 py-3 rounded-2xl bg-terracotta text-white text-xs font-extrabold shadow-md">✨ Generate Bilingual AI Listing →</button>
+        `;
+      }
+
+      if (step === 3) {
+        return `
+          ${stepper}
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-heritage text-xl text-ink">${t('step3_title')}</h3>
+            <button onclick="speakCurrentDraft()" class="px-2.5 py-1 rounded-full bg-indigoCraft text-white text-[10px] font-bold flex items-center gap-1">🔊 Listen</button>
+          </div>
+          <p class="text-[11px] text-inkSoft mb-3">${t('step3_sub')}</p>
+          <div class="bg-white rounded-2xl p-3.5 border border-line space-y-2.5 shadow-sm">
+            <div>
+              <label class="text-[10px] font-extrabold text-terracotta uppercase">English SEO Title</label>
+              <input value="${d.titleEn}" oninput="state.draft.titleEn=this.value" class="w-full mt-0.5 px-2.5 py-1.5 rounded-xl bg-parchment border border-line text-xs font-bold text-ink" />
+            </div>
+            <div>
+              <label class="text-[10px] font-extrabold text-terracotta uppercase">हिंदी शीर्षक (Hindi Title)</label>
+              <input value="${d.titleHi}" oninput="state.draft.titleHi=this.value" class="w-full mt-0.5 px-2.5 py-1.5 rounded-xl bg-parchment border border-line text-xs font-bold text-ink" />
+            </div>
+            <div>
+              <label class="text-[10px] font-extrabold text-inkSoft uppercase">Craft Story Description</label>
+              <textarea rows="3" oninput="state.draft.descEn=this.value" class="w-full mt-0.5 px-2.5 py-1.5 rounded-xl bg-parchment border border-line text-[11px] text-ink leading-relaxed">${d.descEn}</textarea>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              ${d.tags.map(tag => `<span class="px-2 py-0.5 rounded-full bg-sand text-ink text-[10px] font-bold border border-line">#${tag}</span>`).join('')}
+            </div>
+          </div>
+          <button onclick="state.wizardStep=4; renderAll();" class="w-full mt-3.5 py-3 rounded-2xl bg-terracotta text-white text-xs font-extrabold shadow-md">Looks Great! Set Fair Price →</button>
+        `;
+      }
+
+      return `
+        ${stepper}
+        <h3 class="font-heritage text-xl text-ink">${t('step4_title')}</h3>
+        <p class="text-[11px] text-inkSoft mb-3">${t('step4_sub')}</p>
+        <div class="bg-white rounded-2xl p-4 border border-line space-y-3 shadow-sm">
+          <div>
+            <div class="flex justify-between text-xs font-bold"><span>Raw Material Cost</span><span class="text-terracotta">₹${d.materialCost}</span></div>
+            <input type="range" min="50" max="1500" step="10" value="${d.materialCost}" oninput="updatePricingField('materialCost', this.value)" class="w-full accent-[#B84A29]" />
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-bold"><span>Artisan Labor Hours</span><span class="text-terracotta">${d.laborHours} hrs × ₹${d.hourlyRate}/hr</span></div>
+            <input type="range" min="1" max="24" step="1" value="${d.laborHours}" oninput="updatePricingField('laborHours', this.value)" class="w-full accent-[#B84A29]" />
+          </div>
+          <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
+            <div>
+              <div class="text-[10px] font-extrabold text-forest uppercase">🛡️ Protected Cost Floor</div>
+              <div class="text-[10px] text-emerald-800">Prevents underpricing loss</div>
+            </div>
+            <div class="font-heritage text-xl text-forest">₹${floor}</div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-extrabold"><span>Final Selling Price</span><span class="text-lg font-heritage text-ink">₹${d.finalPrice}</span></div>
+            <input type="range" min="${floor}" max="${floor + 2000}" step="10" value="${Math.max(floor, d.finalPrice)}" oninput="updatePricingField('finalPrice', this.value)" class="w-full accent-[#2A6F4E]" />
+            <div class="flex justify-between text-[10px] font-bold mt-1">
+              <span class="text-inkSoft">Floor: ₹${floor}</span>
+              <span class="text-forest">Guaranteed Profit: +₹${Math.max(0, profit)}</span>
+            </div>
+          </div>
+        </div>
+        <button onclick="publishListingInstantly()" class="w-full mt-3.5 py-3.5 rounded-2xl bg-gradient-to-r from-forest to-[#1E563B] text-white text-xs font-extrabold shadow-lg">${t('publish_btn')}</button>
+      `;
+    }
+
+    function renderSellerCatalogue() {
+      return `
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <h3 class="font-heritage text-xl text-ink">My Craft Catalogue</h3>
+            <p class="text-[11px] text-inkSoft">${state.products.length} products synced with Buyer Store</p>
+          </div>
+          <button onclick="setSellerTab('add'); state.wizardStep=1; renderAll();" class="px-3 py-1.5 rounded-xl bg-terracotta text-white text-[10px] font-extrabold">+ Add New</button>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          ${state.products.map(p => `
+            <div class="bg-white rounded-2xl border border-line overflow-hidden shadow-sm flex flex-col">
+              <div class="h-28 studio-backdrop relative flex items-center justify-center p-2">
+                <img src="${p.img}" class="max-h-full object-contain rounded-lg ${p.studioVerified ? 'studio-graded-img' : ''}" />
+                <span class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded-full text-[8px] font-black ${p.status === 'Live' ? 'bg-emerald-100 text-forest' : 'bg-amber-100 text-amber-800'}">${p.status === 'Live' ? '● Live' : '☁️ Offline'}</span>
+              </div>
+              <div class="p-2.5 flex-1 flex flex-col justify-between">
+                <div class="text-[11px] font-extrabold text-ink line-clamp-2 leading-tight">${p.titleEn}</div>
+                <div class="mt-2 flex items-center justify-between">
+                  <span class="font-heritage text-sm text-terracotta">₹${p.price}</span>
+                  <span class="text-[9px] font-bold text-inkSoft">${p.category}</span>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderSellerOrders() {
+      const stages = ['Placed', 'Packing', 'Shipped', 'Delivered'];
+      return `
+        <h3 class="font-heritage text-xl text-ink">Orders Received</h3>
+        <p class="text-[11px] text-inkSoft mb-3">Update status here — buyers see live tracking instantly!</p>
+        <div class="space-y-3">
+          ${state.orders.map(o => `
+            <div class="bg-white rounded-2xl p-3.5 border border-line shadow-sm">
+              <div class="flex justify-between items-start">
+                <div>
+                  <span class="text-[10px] font-extrabold text-terracotta">${o.id} • ${o.date}</span>
+                  <div class="text-xs font-extrabold text-ink mt-0.5">${o.productTitle}</div>
+                  <div class="text-[11px] text-inkSoft">Buyer: ${o.buyerName}</div>
+                </div>
+                <div class="text-right">
+                  <div class="font-heritage text-base text-ink">₹${o.amount}</div>
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-forest">${o.payment}</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-line flex items-center justify-between">
+                <span class="text-[10px] font-extrabold text-indigoCraft">Stage: ${stages[o.stage - 1]} (${o.stage}/4)</span>
+                ${o.stage < 4 ? `<button onclick="advanceOrderStage('${o.id}')" class="px-3 py-1 rounded-lg bg-terracotta text-white text-[10px] font-extrabold">Mark ${stages[o.stage]} →</button>` : `<span class="text-[10px] font-extrabold text-forest">✅ Completed</span>`}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderBuyerProductCards() {
+      const filtered = state.products.filter(p => {
+        const matchCat = state.buyerCategory === 'All' || p.category === state.buyerCategory;
+        const matchSearch = !state.buyerSearch || p.titleEn.toLowerCase().includes(state.buyerSearch.toLowerCase()) || p.cluster.toLowerCase().includes(state.buyerSearch.toLowerCase());
+        return matchCat && matchSearch;
+      });
+      if (filtered.length === 0) return `<div class="col-span-2 text-center py-8 text-xs text-inkSoft font-semibold">No crafts found matching "${state.buyerSearch}".</div>`;
+      return filtered.map(p => `
+        <div onclick="openProductDetail('${p.id}')" class="bg-white rounded-2xl border border-line overflow-hidden shadow-sm cursor-pointer hover:border-terracotta transition flex flex-col">
+          <div class="h-32 studio-backdrop relative flex items-center justify-center p-2">
+            <img src="${p.img}" class="max-h-full object-contain rounded-lg ${p.studioVerified ? 'studio-graded-img' : ''}" />
+            <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded-md bg-white/90 text-[8px] font-extrabold text-indigoCraft shadow-sm">🎙️ Audio Story</span>
+          </div>
+          <div class="p-2.5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-extrabold text-ink leading-tight line-clamp-2">${p.titleEn}</div>
+              <div class="text-[9px] text-inkSoft font-semibold mt-0.5">📍 ${p.cluster}</div>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-heritage text-base text-terracotta">₹${p.price}</span>
+              <button onclick="event.stopPropagation(); addToCart('${p.id}')" class="w-6 h-6 rounded-lg bg-terracotta text-white font-black text-xs flex items-center justify-center shadow-sm">+</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateBuyerSearch(val) {
+      state.buyerSearch = val;
+      const grid = document.getElementById('buyer-product-grid');
+      if (grid) grid.innerHTML = renderBuyerProductCards();
+    }
+
+    function renderBuyerStore() {
+      const cats = ['All', 'Pottery', 'Textiles', 'Metalwork', 'Woodcraft', 'Paintings'];
+      return `
+        <div class="rounded-2xl bg-gradient-to-r from-[#2A1812] via-[#7A2F19] to-terracotta p-4 text-white mb-3 shadow-md">
+          <div class="text-[9px] font-extrabold uppercase tracking-widest text-[#F4D28C]">100% Authentic GI-Inspired Crafts</div>
+          <h3 class="font-heritage text-xl leading-tight mt-0.5">Direct from India's Master Artisans</h3>
+          <p class="text-[10px] text-white/85 mt-1">Maker's voice story & 92% fair wage guarantee.</p>
+        </div>
+        <input value="${state.buyerSearch}" oninput="updateBuyerSearch(this.value)" placeholder="🔍 Search pottery, silk, Jaipur..." class="w-full px-3.5 py-2 rounded-xl bg-white border border-line text-xs mb-2.5 focus:outline-none focus:border-terracotta" />
+        <div class="flex gap-1.5 overflow-x-auto pb-2 mb-2">
+          ${cats.map(c => `<button onclick="state.buyerCategory='${c}'; renderAll();" class="whitespace-nowrap px-3 py-1 rounded-full text-[10px] font-extrabold border transition ${state.buyerCategory === c ? 'bg-terracotta text-white border-terracotta' : 'bg-white text-inkSoft border-line'}">${c}</button>`).join('')}
+        </div>
+        <div id="buyer-product-grid" class="grid grid-cols-2 gap-3">${renderBuyerProductCards()}</div>
+      `;
+    }
+
+    function renderBuyerCart() {
+      if (state.cart.length === 0) {
+        return `
+          <div class="text-center py-12">
+            <div class="text-4xl mb-2">🛒</div>
+            <h3 class="font-heritage text-xl text-ink">Your Cart is Empty</h3>
+            <p class="text-xs text-inkSoft mt-1">Explore authentic handmade crafts from Indian artisans.</p>
+            <button onclick="setBuyerTab('store')" class="mt-4 px-5 py-2.5 rounded-xl bg-terracotta text-white text-xs font-extrabold">Browse Storefront</button>
+          </div>
+        `;
+      }
+      const items = state.cart.map(c => ({ ...c, prod: state.products.find(p => p.id === c.id) })).filter(x => x.prod);
+      const total = items.reduce((s, x) => s + x.prod.price * x.qty, 0);
+      const artisanEarning = Math.round(total * 0.92);
+      return `
+        <h3 class="font-heritage text-xl text-ink mb-3">Shopping Cart (${items.length})</h3>
+        <div class="space-y-2.5">
+          ${items.map(x => `
+            <div class="bg-white rounded-2xl p-3 border border-line flex items-center gap-3 shadow-sm">
+              <img src="${x.prod.img}" class="w-14 h-14 rounded-xl object-cover studio-graded-img border border-line" />
+              <div class="flex-1 min-w-0">
+                <div class="text-xs font-extrabold text-ink truncate">${x.prod.titleEn}</div>
+                <div class="text-[10px] text-inkSoft">${x.prod.artisan}</div>
+                <div class="font-heritage text-sm text-terracotta mt-0.5">₹${x.prod.price * x.qty}</div>
+              </div>
+              <div class="flex items-center gap-1.5 bg-parchment rounded-xl p-1 border border-line">
+                <button onclick="updateCartQty('${x.id}', -1)" class="w-6 h-6 rounded-lg bg-white text-xs font-black">−</button>
+                <span class="text-xs font-extrabold w-4 text-center">${x.qty}</span>
+                <button onclick="updateCartQty('${x.id}', 1)" class="w-6 h-6 rounded-lg bg-white text-xs font-black">+</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="mt-4 bg-white rounded-2xl p-3.5 border border-line space-y-2 shadow-sm">
+          <div class="flex justify-between text-xs"><span class="text-inkSoft">Craft Total</span><span class="font-bold">₹${total}</span></div>
+          <div class="flex justify-between text-xs"><span class="text-forest font-bold">Direct to Artisan (92%)</span><span class="font-extrabold text-forest">₹${artisanEarning}</span></div>
+          <div class="flex justify-between text-xs"><span class="text-inkSoft">Eco-Craft Packaging & Delivery</span><span class="font-bold text-forest">FREE</span></div>
+          <div class="pt-2 border-t border-line">
+            <div class="text-[10px] font-extrabold text-inkSoft uppercase mb-1.5">Payment Method</div>
+            <div class="grid grid-cols-2 gap-2 text-[11px] font-bold">
+              <label class="flex items-center gap-1.5 p-2 rounded-xl bg-parchment border border-line cursor-pointer"><input type="radio" name="payMethod" value="UPI Paid" checked class="accent-[#B84A29]" /> 📱 UPI Instant</label>
+              <label class="flex items-center gap-1.5 p-2 rounded-xl bg-parchment border border-line cursor-pointer"><input type="radio" name="payMethod" value="Cash on Delivery" class="accent-[#B84A29]" /> 💵 COD</label>
+            </div>
+          </div>
+        </div>
+        <button onclick="placeOrderFromCart()" class="w-full mt-4 py-3.5 rounded-2xl bg-terracotta text-white text-xs font-extrabold shadow-lg">✅ Place Order • ₹${total}</button>
+      `;
+    }
+
+    function renderBuyerOrders() {
+      const stages = ['Placed', 'Packing', 'Shipped', 'Delivered'];
+      return `
+        <h3 class="font-heritage text-xl text-ink">Live Order Tracking</h3>
+        <p class="text-[11px] text-inkSoft mb-3">Real-time sync with artisan fulfillment portal</p>
+        <div class="space-y-3">
+          ${state.orders.map(o => `
+            <div class="bg-white rounded-2xl p-4 border border-line shadow-sm">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <span class="text-[10px] font-extrabold text-terracotta">${o.id} • ${o.date}</span>
+                  <div class="text-xs font-extrabold text-ink">${o.productTitle}</div>
+                </div>
+                <div class="font-heritage text-base text-ink">₹${o.amount}</div>
+              </div>
+              <div class="relative flex justify-between items-center mt-2">
+                <div class="absolute left-3 right-3 top-3 h-1 bg-sand -z-0">
+                  <div class="h-full bg-forest transition-all" style="width: ${((o.stage - 1) / 3) * 100}%;"></div>
+                </div>
+                ${stages.map((st, idx) => `
+                  <div class="flex flex-col items-center z-10">
+                    <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black ${o.stage > idx ? 'bg-forest text-white shadow' : 'bg-sand text-inkSoft'}">${o.stage > idx ? '✓' : idx + 1}</div>
+                    <span class="text-[9px] font-bold mt-1 ${o.stage > idx ? 'text-forest' : 'text-inkSoft'}">${st}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderAppContent() {
+      const container = document.getElementById('app-content');
+      if (state.role === 'seller') {
+        if (state.sellerTab === 'add') container.innerHTML = renderSellerWizard();
+        else if (state.sellerTab === 'catalogue') container.innerHTML = renderSellerCatalogue();
+        else container.innerHTML = renderSellerOrders();
+      } else {
+        if (state.buyerTab === 'store') container.innerHTML = renderBuyerStore();
+        else if (state.buyerTab === 'cart') container.innerHTML = renderBuyerCart();
+        else container.innerHTML = renderBuyerOrders();
+      }
+    }
+
+    function renderAll() {
+      const pillSeller = document.getElementById('pill-seller');
+      const pillBuyer = document.getElementById('pill-buyer');
+      const roleLabel = document.getElementById('phone-role-label');
+      const switchBtn = document.getElementById('phone-switch-btn');
+      const cartBtn = document.getElementById('phone-cart-btn');
+
+      if (state.role === 'seller') {
+        pillSeller.className = 'px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 bg-terracotta text-white shadow-sm';
+        pillBuyer.className = 'px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 text-inkSoft hover:bg-parchment';
+        roleLabel.textContent = t('seller_portal');
+        switchBtn.innerHTML = '🛍️ Buyer';
+        cartBtn.classList.add('hidden');
+      } else {
+        pillBuyer.className = 'px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 bg-indigoCraft text-white shadow-sm';
+        pillSeller.className = 'px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 text-inkSoft hover:bg-parchment';
+        roleLabel.textContent = t('buyer_store');
+        switchBtn.innerHTML = '🔨 Seller';
+        cartBtn.classList.remove('hidden');
+      }
+
+      const nav = document.getElementById('bottom-nav');
+      if (state.role === 'seller') {
+        nav.innerHTML = [
+          { id: 'add', icon: '➕', label: t('nav_add') },
+          { id: 'catalogue', icon: '📦', label: t('nav_catalogue') },
+          { id: 'orders', icon: '📋', label: `${t('nav_orders')} (${state.orders.length})` }
+        ].map(item => `
+          <button onclick="setSellerTab('${item.id}')" class="flex flex-col items-center px-3 py-1 rounded-xl transition ${state.sellerTab === item.id ? 'text-terracotta bg-terracotta/10' : 'text-inkSoft'}">
+            <span class="text-base leading-none">${item.icon}</span>
+            <span class="text-[10px] font-extrabold mt-1">${item.label}</span>
+          </button>
+        `).join('');
+      } else {
+        const cTotal = state.cart.reduce((s, c) => s + c.qty, 0);
+        nav.innerHTML = [
+          { id: 'store', icon: '🛍️', label: t('nav_explore') },
+          { id: 'cart', icon: '🛒', label: `${t('nav_cart')} (${cTotal})` },
+          { id: 'orders', icon: '📍', label: t('nav_my_orders') }
+        ].map(item => `
+          <button onclick="setBuyerTab('${item.id}')" class="flex flex-col items-center px-3 py-1 rounded-xl transition ${state.buyerTab === item.id ? 'text-indigoCraft bg-indigoCraft/10' : 'text-inkSoft'}">
+            <span class="text-base leading-none">${item.icon}</span>
+            <span class="text-[10px] font-extrabold mt-1">${item.label}</span>
+          </button>
+        `).join('');
+      }
+      updateCartBadge();
+      renderAppContent();
+    }
+
+    function updateClock() {
+      const el = document.getElementById('clock-display');
+      if (el) el.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+    updateClock();
+    setInterval(updateClock, 30000);
+    renderAll();
+  </script>
+</body>
+</html>
